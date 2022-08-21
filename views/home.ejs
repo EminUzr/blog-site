@@ -1,0 +1,16 @@
+<%- include("partials/header"); -%>
+
+<div class="container">
+  <h1>Home</h1>
+  <p><%= homeStartingContent %></p>
+  <p></p>
+  <% foundList.forEach((element) => { %>
+  <h1><%= element.title %></h1>
+  <p>
+    <%= element.post.substring(0,100) + "..."%>
+    <a href="/posts/<%= element._id %>">Read More</a>
+  </p>
+  <% }) %>
+</div>
+
+<%- include("partials/footer"); -%>
